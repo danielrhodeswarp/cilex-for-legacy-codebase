@@ -15,8 +15,9 @@ $app = new \Cilex\Application('Cilex CLI for this legacy app');
 $app->command(new \Cilex\Command\GreetCommand());	//in vendor folder
 $app->command(new \Cilex\Command\DemoInfoCommand());	//in vendor folder
 
-//one of ours!
+//our commands!
 $app->command(new \NewStuff\Console\Commands\SalutationCommand());
+$app->command(new \NewStuff\Console\Commands\UsesDatabaseCommand());
 
 $app->command('foo', function ($input, $output) {	//inline command
 
