@@ -1,5 +1,7 @@
 <?php
 
+//Essentially a carbon copy of GreetCommand from cilex/cilex install
+
 /*
  * This file is part of the Cilex framework.
  *
