@@ -1,17 +1,7 @@
 <?php
 
-/*
- * This file is part of the Cilex framework.
- *
- * (c) Mike van Riel <mike.vanriel@naenius.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 //namespace Cilex\Command;
 namespace NewStuff\Console\Commands;
-
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -22,7 +12,7 @@ use Cilex\Provider\Console\Command;
 use PDO;
 
 /**
- * Example command for testing purposes.
+ * Example of using legacy app's database connection.
  */
 class UsesDatabaseCommand extends Command
 {
@@ -50,7 +40,6 @@ class UsesDatabaseCommand extends Command
         $config = $this->getLegacyAppDbConfig();
 
         $pdo = new PDO("mysql:host={$config['host']};dbname={$config['schema']}", $config['user'], $config['password']);
-
 
         $output->writeln('Contents of legacy_data table:');
 

@@ -12,7 +12,6 @@
 //namespace Cilex\Command;
 namespace NewStuff\Console\Commands;
 
-
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -32,8 +31,8 @@ class SalutationCommand extends Command
         $this
             ->setName('new:salute')
             ->setDescription('Salute someone')
-            //->addArgument('name', InputArgument::OPTIONAL, 'Who do you want to greet?')
-            //->addOption('yell', 'y', InputOption::VALUE_NONE, 'If set, the task will yell in uppercase letters')
+            ->addArgument('name', InputArgument::OPTIONAL, 'Who do you want to greet?')
+            ->addOption('yell', 'y', InputOption::VALUE_NONE, 'If set, the task will yell in uppercase letters')
             ;
     }
 
